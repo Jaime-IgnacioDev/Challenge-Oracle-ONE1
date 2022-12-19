@@ -1,0 +1,146 @@
+@import './variables';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 18px;
+  font-family: $Font;
+}
+
+.header{
+  &__contenedor{
+    margin: 20px 15px 50px 15px;
+  }
+  @media (min-width: 1024px){
+    &__contenedor{
+      margin: 30px 15px 50px 30px;
+    }
+  }
+}
+
+.encriptador{
+  &__contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &-botones{
+      width: 100%;
+      margin-bottom: 15px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+  }
+  &__textos{
+    width: 100%;
+  }
+  &__text-area{
+    width: 95%;
+    min-width: 95%;
+    max-width: 100%;
+    height: 250px;
+    max-height: 300px;
+    min-height: 250px;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 5px;
+    border: none;
+    font-size: 1.2em;
+    font-weight: 400;
+    font-family: $Font;
+    color: $ColorPrimario;
+    padding: 5px 5px;
+
+    &::placeholder{
+      color: $ColorPrimario;
+      text-align: start;
+      letter-spacing: 2px;
+
+      font-weight: 500;
+    }
+    &:focus{
+      border: 1px solid $ColorPrimario;
+    }
+  }
+  &__requerimientos{
+    width: 100%;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    opacity: .8;
+    font-size: .78em;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+  }
+  &__boton{
+    width: 90%;
+    padding: 13px;
+
+    border: 1px solid $ColorPrimario;
+    border-radius: 10px;
+    background-color: $ColorSecundario;
+    font-weight: 500;
+    cursor: pointer;
+    &:first-child{
+      background: $ColorPrimario;
+      color: $ColorSecundario;
+      &:hover{
+        background: $ColorSecundario;
+        color: $ColorPrimario;
+      }
+    }
+    &:hover{
+      background: $ColorPrimario;
+      color: $ColorSecundario;
+    }
+  }
+  &__resultados{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__secundario{
+    display: none;
+  }
+  &__resultado{
+    margin-bottom: 20px;
+  }
+  &__texto-encriptado{
+    margin-bottom: 20px;
+  }
+  @media (min-width: 768px){
+    &__contenedor{
+      &-botones{
+        flex-direction: row;
+        padding: 0 20px;
+      }
+    }
+    &__textos{
+      padding: 0 10px;
+    }
+  }
+  @media (min-width: 1024px){
+    &__contenedor{
+      flex-direction: row;
+    }
+    &__resultados{
+      width: 55%;
+    }
+    &__secundario{
+      display: block;
+    }
+  }
+}

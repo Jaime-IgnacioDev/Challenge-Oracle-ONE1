@@ -1,34 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css" />
-
+    <link rel="stylesheet" type="text/css" href="./style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
     <title>Encriptador/Desencriptador</title>
-</head>
+  </head>
 
-<body>
-    <div class="tittle_1">
-        <h1>Encriptador y desencriptador de palabras</h1>
-    </div>
-    <div class="subtittle_1">
-        <p>Ingresa la palabra que deseas encriptar o desencriptar:</p>
-    </div>
-    <input type="text" id="input-text" />
-    <br />
-    <button id="encrypt-button">Encriptar</button>
-    <button id="decrypt-button">Desencriptar</button>
-    <button id="copy-button">Copiar texto encriptado</button>
-    <br />
-    <p>Resultado:</p>
-    <p id="result"></p>
+  <body>
+    <main>
+      <header class="header__contenedor">
+        <h1>
+          <img class="header__logo" src="./Images/icon.png" alt="icono" />
+        </h1>
+      </header>
+
+      <section class="encriptador__contenedor">
+        <div class="encriptador__textos">
+          <textarea
+            class="encriptador__text-area"
+            name=""
+            id="input-text"
+            placeholder="Ingrese el texto aqui"
+          ></textarea>
+
+          <p class="encriptador__requerimientos">
+            <img src="./Images/exclamacion.png" alt="icono exclamacion" /> Solo
+            letras minúsculas y sin acentos
+          </p>
+
+          <div class="encriptador__contenedor-botones">
+            <button class="encriptador__boton" id="encrypt-button">
+              Encriptar
+            </button>
+            <button class="encriptador__boton" id="decrypt-button">
+              Desencriptar
+            </button>
+          </div>
+        </div>
+
+        <div class="encriptador__resultados">
+          <img class="encriptador__secundario" src="./Images/Muñeco.png" alt="logo secundario">
+          <p class="encriptador__resultado">Resultado:</p>
+          <p class="encriptador__texto-encriptado" id="result"></p>
+
+          <button class="encriptador__boton" id="copy-button">
+            Copiar texto encriptado
+          </button>
+        </div>
+      </section>
+    </main>
 
     <script src="encrypter.js"></script>
-
-</body>
-
+  </body>
 </html>
