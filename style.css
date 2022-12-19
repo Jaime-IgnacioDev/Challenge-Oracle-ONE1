@@ -1,0 +1,38 @@
+body {
+    font-family: sans-serif;
+}
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+textarea {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  resize: none;
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #45a049;
+}
+
+h1 {
+    text-align: center;
+}
+.subtittle_1 {
+    text-align: center;
+}
